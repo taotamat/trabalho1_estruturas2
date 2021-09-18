@@ -118,7 +118,7 @@ int main(){
 
 			case 7:
 				// Remover uma palavra de uma unidade;
-				gestao_removerPALAVRA(arvPRINCIPAL->raiz);
+				gestao_removePALAVRA(arvPRINCIPAL);
 				break;
 
 			default:

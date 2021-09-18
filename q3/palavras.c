@@ -310,3 +310,138 @@ void gestao_imprimirPALAVRA(UNIDADE *raiz){
 	encontrado = andar_pelas_unidades(raiz, palavra);
 	imprimirPALAVRA(encontrado, palavra); }
 
+
+// Função que retorna a quantidade de filhos que o NO possui.
+int qnt_filhos(PALAVRA *aux) {
+	printf("qnt_filhos\n");
+	int qnt;
+	if( aux->esq != NULL && aux->dir != NULL )
+		qnt = 2;
+	else if( aux->esq == NULL && aux->dir == NULL  )
+		qnt = 0;
+	else
+		qnt = 1;
+	return qnt; }
+
+// Remover um NO que possui 1 filho.
+	// Ele realiza a troca dos valores
+	// E em seguida remove a folha;
+PALAVRA *remove_pai_um(PALAVRA *raiz){
+	printf("remove_pai_um\n");
+	PALAVRA *aux;
+	PALAVRA *copia;
+	
+	copia = alocaPALAVRA();
+
+	if( raiz->esq != NULL )
+		aux = raiz->esq;
+	else
+		aux = raiz->dir;
+
+	*copia = *raiz;
+	*raiz = *aux;
+	*aux = *copia;
+
+	raiz->esq = aux->esq;
+	raiz->dir = aux->dir;
+
+	free(aux);
+	free(copia);
+	aux = NULL;
+
+	return raiz; }
+
+// Função que retorna o NO que possui o maior valor que se encontra na esquerda do NO aux;
+PALAVRA *maior_da_esquerda(PALAVRA *aux){
+	PALAVRA *resultado;
+	resultado = NULL;
+	if( aux != NULL ){
+		if( aux->dir == NULL )
+			resultado = aux;
+		else
+			resultado = maior_da_esquerda(aux->dir); }
+	return resultado; }
+
+// Função que remove um NO que possui dois filhos;
+void remove_com_dois_filhos(PALAVRA **aux){
+	
+	PALAVRA *maior;
+	PALAVRA *aux2; // Tem que ser do tipo do conteudo do NO.
+
+	aux2 = alocaPALAVRA();
+
+	// Procurar o maior da esquerda:
+	maior = maior_da_esquerda((*aux)->esq);
+
+	if(maior != NULL) {
+		// Tirar as ligações
+		(*aux)->esq = maior->esq;
+
+		// Troca dos dados:
+		*aux2 = **aux;
+		**aux = *maior;
+		*maior = *aux2;
+		
+		free(maior);
+		free(aux2);
+		maior = NULL;
+	} }
+
+// Função que chama as funções de remover
+	// trava 1 - Foi encontrado e removido
+	// trava 0 - Não foi encontrado e não foi removido.
+void remover(PALAVRA **raiz, char *palavra, int *trava){
+	
+	int comparacao;
+	PALAVRA *aux;
+	int qnt;
+
+	if( *raiz != NULL ) {
+		comparacao = strcmp(palavra, (*raiz)->palavra_pot);
+	}
+
+	if( *raiz == NULL ){
+		// raiz é nula. o valor não foi encontrado.
+		 printf("Valor %s nao foi encontrado! \n", palavra);
+	} else if( comparacao == 0 ){
+		// é o mesmo valor!
+		qnt = qnt_filhos(*raiz);
+		*trava = 1;
+
+		if(qnt == 0){
+			free(*raiz);
+			*raiz = NULL;
+		} else if(qnt == 1)
+			*raiz = remove_pai_um(*raiz);
+		else
+			remove_com_dois_filhos(raiz);
+
+	} else if( comparacao > 0 ) {
+		remover(&(*raiz)->esq, palavra, trava);
+
+	} else if( comparacao < 0 ) {
+		remover(&(*raiz)->dir, palavra, trava);
+	} }
+
+void andar_pelas_unidades_remocao(UNIDADE *raiz, char *palavra){
+
+	int trava = 0;
+
+	printf("andar_pelas_unidades_remocao\n");
+
+	if( raiz != NULL ) {
+		remover(&raiz->arvorePALAVRAS->raiz, palavra, &trava);
+
+		if( trava == 0 ) {
+			andar_pelas_unidades_remocao(raiz->esq, palavra); /* busque no lado esquerdo. */
+
+			if ( trava == 0 ) /* Caso não seja encontrado no lado esquerdo, busque no lado direito. */
+				andar_pelas_unidades_remocao(raiz->dir, palavra); } } }
+
+void gestao_removePALAVRA(arvUNIDADE *arvPRINCIPAL) {
+	char palavra[51];
+	printf("Digite o PALAVRA que deseja REMOVER: ");
+	scanf(" %[^\n]s", palavra );
+	setbuf(stdin, NULL); // Limpesa do buffer
+	maiusculo(palavra); // Deixa tudo em maiusculos.
+	andar_pelas_unidades_remocao( arvPRINCIPAL->raiz, palavra ); }
