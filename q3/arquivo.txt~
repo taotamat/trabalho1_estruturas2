@@ -1,0 +1,12 @@
+%Cores
+green:verde
+red:vermelho
+blue:azul
+%Animais
+Dog:Cachorro
+Snake:Cobra
+Cat:Gato
+%Profissões
+Teacher:Professor
+Doctor:Médico
+Painter:Pintor

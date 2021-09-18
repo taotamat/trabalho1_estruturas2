@@ -1,0 +1,15 @@
+%Cores
+verde:green.
+vermelho:red.
+azul:blue.
+amarelo:yellow.
+%Animais
+cachorro:dog.
+cobra:snake.
+ave:bird.
+%Profissoes
+Professor:teacher.
+Medico:doctor.
+Pintor:painter.
+%Unidade
+Casa:home,house,household,habitation.
