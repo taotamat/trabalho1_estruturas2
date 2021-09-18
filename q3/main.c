@@ -26,7 +26,7 @@
 	seguida das equivalentes em inglês. 
 	[OK] - Depois. imprima todas as palavras em inglês equivalentes a uma palavra em português dada, 
 	pesquisando para isso em todas as árvores das unidades cadastradas. 
-	[  ] - Por fim permita o usuário remover uma determinada palavra 
+	[OK] - Por fim permita o usuário remover uma determinada palavra 
 	em português de uma unidade, e consequentemente as palavras em inglês equivalentes a ela.
 */
 
