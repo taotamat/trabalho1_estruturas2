@@ -84,7 +84,6 @@ void preordem_unidade(UNIDADE *unidade){
 		
 		printf("-------------------------------------------- \n");
 		printf("| %s \n", unidade->nome);
-		// printf("unidade->arvorePALAVRAS->raiz = %p \n", unidade->arvorePALAVRAS);
 		preordem_palavra(unidade->arvorePALAVRAS->raiz);
 		printf("-------------------------------------------- \n\n\n");
 
@@ -96,9 +95,10 @@ void preordem_unidade(UNIDADE *unidade){
 void inordem_unidade(UNIDADE *unidade){
 	if(unidade != NULL){
 		inordem_unidade(unidade->esq);
-
-		printf("UNIDADE = %s \n", unidade->nome);
+		printf("-------------------------------------------- \n");
+		printf("| %s \n", unidade->nome);
 		inordem_palavra(unidade->arvorePALAVRAS->raiz);
+		printf("-------------------------------------------- \n\n\n");
 
 		inordem_unidade(unidade->dir);
 	} }
@@ -108,10 +108,11 @@ void posordem_unidade(UNIDADE *unidade){
 	if(unidade != NULL){
 		posordem_unidade(unidade->esq);
 		posordem_unidade(unidade->dir);
-		printf("UNIDADE = %s \n", unidade->nome);
+		printf("-------------------------------------------- \n");
+		printf("| %s \n", unidade->nome);
 		posordem_palavra(unidade->arvorePALAVRAS->raiz);
+		printf("-------------------------------------------- \n\n\n");
 	} }
-
 // Função que busca uma unidade na árvore de unidades.
 	/*  strcmp(string1, string2);
 

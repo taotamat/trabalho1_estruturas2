@@ -1,0 +1,435 @@
+-------------------------------------------------------------
+ARVORE [ 1 ]
+Tempo de inserção = 0.297000 ms
+FOLHAS:
+nivel de maior profundidade: 25 (35612)
+nivel de menor profundidade: 4 (12096)
+Diferenca: 25 - 4 = 21
+BUSCA:
+[ 100 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.002000 ms  - encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 2 ]
+Tempo de inserção = 0.231000 ms
+FOLHAS:
+nivel de maior profundidade: 20 (1978)
+nivel de menor profundidade: 5 (33901)
+Diferenca: 20 - 5 = 15
+BUSCA:
+[ 100 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 3 ]
+Tempo de inserção = 0.228000 ms
+FOLHAS:
+nivel de maior profundidade: 20 (40698)
+nivel de menor profundidade: 5 (56218)
+Diferenca: 20 - 5 = 15
+BUSCA:
+[ 100 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 4 ]
+Tempo de inserção = 0.232000 ms
+FOLHAS:
+nivel de maior profundidade: 22 (19392)
+nivel de menor profundidade: 3 (4949)
+Diferenca: 22 - 3 = 19
+BUSCA:
+[ 100 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 5 ]
+Tempo de inserção = 0.228000 ms
+FOLHAS:
+nivel de maior profundidade: 24 (11332)
+nivel de menor profundidade: 4 (3533)
+Diferenca: 24 - 4 = 20
+BUSCA:
+[ 100 ] - tempo de procura = 0.001000 ms  - encontrado
+[ 500 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 6 ]
+Tempo de inserção = 0.233000 ms
+FOLHAS:
+nivel de maior profundidade: 22 (18365)
+nivel de menor profundidade: 5 (10687)
+Diferenca: 22 - 5 = 17
+BUSCA:
+[ 100 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 7 ]
+Tempo de inserção = 0.219000 ms
+FOLHAS:
+nivel de maior profundidade: 19 (28395)
+nivel de menor profundidade: 5 (183)
+Diferenca: 19 - 5 = 14
+BUSCA:
+[ 100 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 8 ]
+Tempo de inserção = 0.241000 ms
+FOLHAS:
+nivel de maior profundidade: 26 (23385)
+nivel de menor profundidade: 6 (2000)
+Diferenca: 26 - 6 = 20
+BUSCA:
+[ 100 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.001000 ms  - encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 9 ]
+Tempo de inserção = 0.362000 ms
+FOLHAS:
+nivel de maior profundidade: 23 (39561)
+nivel de menor profundidade: 6 (4009)
+Diferenca: 23 - 6 = 17
+BUSCA:
+[ 100 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.003000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 10 ]
+Tempo de inserção = 0.438000 ms
+FOLHAS:
+nivel de maior profundidade: 21 (12124)
+nivel de menor profundidade: 5 (56372)
+Diferenca: 21 - 5 = 16
+BUSCA:
+[ 100 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 11 ]
+Tempo de inserção = 0.333000 ms
+FOLHAS:
+nivel de maior profundidade: 21 (5220)
+nivel de menor profundidade: 6 (355)
+Diferenca: 21 - 6 = 15
+BUSCA:
+[ 100 ] - tempo de procura = 0.002000 ms  - encontrado
+[ 500 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 12 ]
+Tempo de inserção = 0.322000 ms
+FOLHAS:
+nivel de maior profundidade: 21 (6153)
+nivel de menor profundidade: 5 (43379)
+Diferenca: 21 - 5 = 16
+BUSCA:
+[ 100 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.002000 ms  - encontrado
+[ 10000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 13 ]
+Tempo de inserção = 0.336000 ms
+FOLHAS:
+nivel de maior profundidade: 20 (3031)
+nivel de menor profundidade: 4 (58832)
+Diferenca: 20 - 4 = 16
+BUSCA:
+[ 100 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 14 ]
+Tempo de inserção = 0.330000 ms
+FOLHAS:
+nivel de maior profundidade: 21 (941)
+nivel de menor profundidade: 6 (49777)
+Diferenca: 21 - 6 = 15
+BUSCA:
+[ 100 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 15 ]
+Tempo de inserção = 0.294000 ms
+FOLHAS:
+nivel de maior profundidade: 26 (18707)
+nivel de menor profundidade: 5 (1184)
+Diferenca: 26 - 5 = 21
+BUSCA:
+[ 100 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 16 ]
+Tempo de inserção = 0.261000 ms
+FOLHAS:
+nivel de maior profundidade: 20 (7489)
+nivel de menor profundidade: 6 (6588)
+Diferenca: 20 - 6 = 14
+BUSCA:
+[ 100 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 17 ]
+Tempo de inserção = 0.264000 ms
+FOLHAS:
+nivel de maior profundidade: 20 (7124)
+nivel de menor profundidade: 6 (4541)
+Diferenca: 20 - 6 = 14
+BUSCA:
+[ 100 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 18 ]
+Tempo de inserção = 0.280000 ms
+FOLHAS:
+nivel de maior profundidade: 22 (37183)
+nivel de menor profundidade: 6 (774)
+Diferenca: 22 - 6 = 16
+BUSCA:
+[ 100 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 19 ]
+Tempo de inserção = 0.267000 ms
+FOLHAS:
+nivel de maior profundidade: 21 (15739)
+nivel de menor profundidade: 6 (6919)
+Diferenca: 21 - 6 = 15
+BUSCA:
+[ 100 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 20 ]
+Tempo de inserção = 0.281000 ms
+FOLHAS:
+nivel de maior profundidade: 24 (5323)
+nivel de menor profundidade: 4 (16069)
+Diferenca: 24 - 4 = 20
+BUSCA:
+[ 100 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 21 ]
+Tempo de inserção = 0.288000 ms
+FOLHAS:
+nivel de maior profundidade: 23 (8327)
+nivel de menor profundidade: 5 (3355)
+Diferenca: 23 - 5 = 18
+BUSCA:
+[ 100 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 22 ]
+Tempo de inserção = 0.294000 ms
+FOLHAS:
+nivel de maior profundidade: 24 (16572)
+nivel de menor profundidade: 5 (59774)
+Diferenca: 24 - 5 = 19
+BUSCA:
+[ 100 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 23 ]
+Tempo de inserção = 0.280000 ms
+FOLHAS:
+nivel de maior profundidade: 24 (19665)
+nivel de menor profundidade: 5 (56780)
+Diferenca: 24 - 5 = 19
+BUSCA:
+[ 100 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 24 ]
+Tempo de inserção = 0.270000 ms
+FOLHAS:
+nivel de maior profundidade: 19 (2135)
+nivel de menor profundidade: 5 (59669)
+Diferenca: 19 - 5 = 14
+BUSCA:
+[ 100 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 25 ]
+Tempo de inserção = 0.281000 ms
+FOLHAS:
+nivel de maior profundidade: 24 (14626)
+nivel de menor profundidade: 6 (6045)
+Diferenca: 24 - 6 = 18
+BUSCA:
+[ 100 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.001000 ms  - encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 26 ]
+Tempo de inserção = 0.278000 ms
+FOLHAS:
+nivel de maior profundidade: 21 (4453)
+nivel de menor profundidade: 6 (8630)
+Diferenca: 21 - 6 = 15
+BUSCA:
+[ 100 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 27 ]
+Tempo de inserção = 0.276000 ms
+FOLHAS:
+nivel de maior profundidade: 21 (52226)
+nivel de menor profundidade: 3 (9187)
+Diferenca: 21 - 3 = 18
+BUSCA:
+[ 100 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 28 ]
+Tempo de inserção = 0.310000 ms
+FOLHAS:
+nivel de maior profundidade: 24 (37286)
+nivel de menor profundidade: 5 (55410)
+Diferenca: 24 - 5 = 19
+BUSCA:
+[ 100 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 29 ]
+Tempo de inserção = 0.316000 ms
+FOLHAS:
+nivel de maior profundidade: 24 (7623)
+nivel de menor profundidade: 6 (15160)
+Diferenca: 24 - 6 = 18
+BUSCA:
+[ 100 ] - tempo de procura = 0.003000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.003000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+ARVORE [ 30 ]
+Tempo de inserção = 0.326000 ms
+FOLHAS:
+nivel de maior profundidade: 21 (3318)
+nivel de menor profundidade: 6 (32325)
+Diferenca: 21 - 6 = 15
+BUSCA:
+[ 100 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 500 ] - tempo de procura = 0.002000 ms  - nao encontrado
+[ 1000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 5000 ] - tempo de procura = 0.001000 ms  - nao encontrado
+[ 10000 ] - tempo de procura = 0.002000 ms  - nao encontrado
+-------------------------------------------------------------
+-------------------------------------------------------------
+RESULTADOS:
+14 aparece 4 vezes 
+15 aparece 7 vezes 
+16 aparece 4 vezes 
+17 aparece 2 vezes 
+18 aparece 4 vezes 
+19 aparece 4 vezes 
+20 aparece 3 vezes 
+21 aparece 2 vezes 
+-------------------------------------------------------------
+Tempo médio de inserçao = 0.286533 ms
+Tempo medio de busca = 0.001453 ms
+Execucao = 18.348000 ms
+-------------------------------------------------------------

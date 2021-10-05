@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <time.h>
 #include "unidades.h"
 #include "palavras.h"
 #include "arquivo.h"
@@ -26,7 +27,7 @@
 	seguida das equivalentes em inglês. 
 	[OK] - Depois. imprima todas as palavras em inglês equivalentes a uma palavra em português dada, 
 	pesquisando para isso em todas as árvores das unidades cadastradas. 
-	[OK] - Por fim permita o usuário remover uma determinada palavra 
+	[  ] - Por fim permita o usuário remover uma determinada palavra 
 	em português de uma unidade, e consequentemente as palavras em inglês equivalentes a ela.
 */
 

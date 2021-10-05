@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <time.h>
 #include "unidades.h"
 #include "palavras.h"
 #include "arquivo.h"
 #include "balanceamento.h"
-
 /*
 	Enunciado da questão:
 	(2,5 pontos) Cada unidade em um livro-texto inglês contém um vocabulário Inglês-Português de palavras que são usadas 
@@ -27,8 +27,11 @@
 	seguida das equivalentes em inglês. 
 	[OK] - Depois. imprima todas as palavras em inglês equivalentes a uma palavra em português dada, 
 	pesquisando para isso em todas as árvores das unidades cadastradas. 
-	[  ] - Por fim permita o usuário remover uma determinada palavra 
+	[OK] - Por fim permita o usuário remover uma determi nada palavra 
 	em português de uma unidade, e consequentemente as palavras em inglês equivalentes a ela.
+
+	[OK] - Fazer a contagem de tempo de inserção
+	[  ] - Fazer a contagem de tempo de busca.
 */
 
 //----------------------------------------------------------//

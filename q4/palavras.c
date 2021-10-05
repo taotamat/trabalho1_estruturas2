@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <time.h>
 #include "unidades.h"
 #include "palavras.h"
 #include "arquivo.h"
@@ -57,28 +58,27 @@ void inserir_arvPALAVRA(arvPALAVRAS *arvore, PALAVRA **aux, PALAVRA **nova) {
 		*aux = *nova;
 		(*arvore).qnt = (*arvore).qnt + 1;
 
-	} else if( comparacao < 0 && (*aux)->esq != NULL ) {
+	} else if( comparacao > 0 && (*aux)->esq != NULL ) {
 		// Se o dado de novo NO for menor e o filho esquerdo do NO aux NÃO FOR NULL, 
 		// Então o novo NO vai ser comparado ao filho esquerdo do NO aux.
 		inserir_arvPALAVRA(arvore, &((*aux)->esq), nova);
-	} else if( comparacao < 0 && (*aux)->esq == NULL ) {
+	} else if( comparacao > 0 && (*aux)->esq == NULL ) {
 		// Se o dado de novo NO for menor e o filho esquerdo do NO aux FOR NULL, 
 		// Então o novo NO será o novo filho esquerdo do NO aux.
 		(*aux)->esq = *nova;
 		(*arvore).qnt = (*arvore).qnt + 1;
-	} else if( comparacao > 0 && (*aux)->dir != NULL ) {
+	} else if( comparacao < 0 && (*aux)->dir != NULL ) {
 		// Se o dado de novo NO for maior e o filho direito do NO aux NÃO FOR NULL, 
 		// Então o novo NO vai ser comparado ao filho direito do NO aux.
 		inserir_arvPALAVRA(arvore, &((*aux)->dir), nova);
-	} else if( comparacao > 0 && (*aux)->dir == NULL ) {
+	} else if( comparacao < 0 && (*aux)->dir == NULL ) {
 		// Se o dado de novo NO for maior e o filho direito do NO aux FOR NULL, 
 		// Então o novo NO será o novo filho direito do NO aux.
 		(*aux)->dir = *nova;
 		(*arvore).qnt = (*arvore).qnt + 1;
 	} 
 
-	gestaoBALANCEAMENTO(aux);
-}
+	gestaoBALANCEAMENTO(aux); }
 
 // Salva a palavra portuguesa na estrutura PALAVRA
 	// deve alocar um espaço para a nova PALAVRA
@@ -161,8 +161,7 @@ void inserirLISTA(LISTA *lista, PALAVRA_ENG *nova){
 		}
 	} 
 
-	(*lista).qnt++;
-}
+	(*lista).qnt++; }
 
 // Salva a palavra inglesa na LISTA presente em uma estrutura de uma PALAVRA;
 	// Uma nova PALAVRA_ENG deve ser alocada
@@ -236,36 +235,42 @@ void preordem_palavra( PALAVRA *palavra ){
 // Apresentar em ordem in-ordem
 void inordem_palavra( PALAVRA *palavra ) {
 	if( palavra != NULL ){
+
+
 		inordem_palavra( palavra->esq );
-
-		printf("\tPALAVRA PORTUGUES = %s \n", palavra->palavra_pot);
-		apresentaLISTA(palavra->palavras_eng->ini); // Apresentar a lista de palavras inglesas.
-
+		printf("|\t| %s\n", palavra->palavra_pot );
+		apresentaLISTA( palavra->palavras_eng->ini ); // Apresentar a lista de palavras inglesas.
+		printf("|\t|\t---------------------------- \n");
+		printf("|\t------------------------------------ \n");
 		inordem_palavra( palavra->dir );
 	} }
 
 // Apresentar em ordem pos-ordem
 void posordem_palavra( PALAVRA *palavra ) {
 	if( palavra != NULL ){
-		posordem_palavra( palavra->esq );		
-		posordem_palavra( palavra->dir );
-
-		printf("\tPALAVRA PORTUGUES = %s \n", palavra->palavra_pot);
-		apresentaLISTA(palavra->palavras_eng->ini); // Apresentar a lista de palavras inglesas.
+		inordem_palavra( palavra->esq );
+		inordem_palavra( palavra->dir );
+		printf("|\t| %s\n", palavra->palavra_pot );
+		apresentaLISTA( palavra->palavras_eng->ini ); // Apresentar a lista de palavras inglesas.
+		printf("|\t|\t---------------------------- \n");
+		printf("|\t------------------------------------ \n");
+		
 	} }
 
 // Função que busca uma palavra em uma unidade;
 PALAVRA *buscaPALAVRA(PALAVRA *raiz, char *palavra){
 	PALAVRA *encontrado;
 	encontrado = NULL;
+	int comparacao;
 	if( raiz != NULL ){
-		if ( strcmp( raiz->palavra_pot, palavra ) == 0 ) {
+		comparacao = strcmp( raiz->palavra_pot, palavra );
+		if ( comparacao == 0 ) {
 			// Eles são iguais; Raiz é a unidade que armazena a palavra buscada;
 			encontrado = raiz;
+		} else if(comparacao > 0) {
+			encontrado = buscaPALAVRA(raiz->esq, palavra); // Busca pelo o lado esquerdo				
 		} else {
-			encontrado = buscaPALAVRA(raiz->esq, palavra); // Busca pelo o lado esquerdo
-			if( encontrado == NULL ) // Senão ele fará outra busca pelo o lado direito;
-				encontrado = buscaPALAVRA(raiz->dir, palavra); // Caso a palavra não for encontrada pelo o lado esquerdo, então deverá ser buscado pelo o lado direito.
+			encontrado = buscaPALAVRA(raiz->dir, palavra); // Caso a palavra não for encontrada pelo o lado esquerdo, então deverá ser buscado pelo o lado direito.
 		}
 	}// Fim do if
 	return encontrado; }
@@ -305,20 +310,35 @@ void imprimirPALAVRA(PALAVRA *encontrado, char *palavra){
 // E por fim, chama a função que apresenta o que foi encontrado.
 void gestao_imprimirPALAVRA(UNIDADE *raiz){
 
+
 	PALAVRA *encontrado;
 	char palavra[51];
+	FILE *arq;
+	clock_t tempo_inicial;
+	
 
+	/* Digitar a palavra que será buscada*/
 	printf("Digite a palavra que deseja buscar: ");
 	scanf(" %[^\n]s", palavra );
 	setbuf(stdin, NULL);
 	maiusculo(palavra);
+
+	/* Abrir o arquivo */
+	arq = fopen("busca.txt", "a");
+
+	/* Marcar o tempo inicial */
+	tempo_inicial = clock();
+
 	encontrado = andar_pelas_unidades(raiz, palavra);
-	imprimirPALAVRA(encontrado, palavra); }
+	imprimirPALAVRA(encontrado, palavra);
+
+	marcar_tempo(arq, palavra, 3, &tempo_inicial);
+	fclose(arq); }
 
 
 // Função que retorna a quantidade de filhos que o NO possui.
 int qnt_filhos(PALAVRA *aux) {
-	printf("qnt_filhos\n");
+	
 	int qnt;
 	if( aux->esq != NULL && aux->dir != NULL )
 		qnt = 2;
@@ -332,7 +352,7 @@ int qnt_filhos(PALAVRA *aux) {
 	// Ele realiza a troca dos valores
 	// E em seguida remove a folha;
 PALAVRA *remove_pai_um(PALAVRA *raiz){
-	printf("remove_pai_um\n");
+	
 	PALAVRA *aux;
 	PALAVRA *copia;
 	
@@ -368,28 +388,34 @@ PALAVRA *maior_da_esquerda(PALAVRA *aux){
 	return resultado; }
 
 // Função que remove um NO que possui dois filhos;
-void remove_com_dois_filhos(PALAVRA **aux){
+void remove_com_dois_filhos(PALAVRA **raiz){
 	
-	PALAVRA *maior;
-	PALAVRA *aux2; // Tem que ser do tipo do conteudo do NO.
+	PALAVRA *no;
 
-	aux2 = alocaPALAVRA();
+	char palavra_pot_aux[51];
+	LISTA *palavras_eng_aux;
+	
 
-	// Procurar o maior da esquerda:
-	maior = maior_da_esquerda((*aux)->esq);
+	no = maior_da_esquerda( (*raiz)->esq );
 
-	if(maior != NULL) {
-		// Tirar as ligações
-		(*aux)->esq = maior->esq;
+	if( no != NULL ) {
 
-		// Troca dos dados:
-		*aux2 = **aux;
-		**aux = *maior;
-		*maior = *aux2;
-		
-		free(maior);
-		free(aux2);
-		maior = NULL;
+		/* Troca dos dados */
+		strcpy(palavra_pot_aux, (*raiz)->palavra_pot );
+		palavras_eng_aux = (*raiz)->palavras_eng;
+
+
+		strcpy((*raiz)->palavra_pot, no->palavra_pot);
+		(*raiz)->palavras_eng = no->palavras_eng;
+
+
+		strcpy( no->palavra_pot, palavra_pot_aux );
+		no->palavras_eng = palavras_eng_aux;
+
+		(*raiz)->esq = no->esq;
+		no->esq = NULL;
+
+		free(no);
 	} }
 
 // Função que chama as funções de remover
@@ -421,18 +447,19 @@ void remover(PALAVRA **raiz, char *palavra, int *trava){
 		else
 			remove_com_dois_filhos(raiz);
 
-	} else if( comparacao > 0 ) {
+	} else if( comparacao < 0 ) {
 		remover(&(*raiz)->esq, palavra, trava);
 
-	} else if( comparacao < 0 ) {
+	} else if( comparacao > 0 ) {
 		remover(&(*raiz)->dir, palavra, trava);
-	} }
+	}
+
+	gestaoBALANCEAMENTO(raiz);
+}
 
 void andar_pelas_unidades_remocao(UNIDADE *raiz, char *palavra){
 
 	int trava = 0;
-
-	printf("andar_pelas_unidades_remocao\n");
 
 	if( raiz != NULL ) {
 		remover(&raiz->arvorePALAVRAS->raiz, palavra, &trava);

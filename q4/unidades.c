@@ -48,20 +48,20 @@ void inserir_arvUNIDADE(arvUNIDADE *arvPRINCIPAL, UNIDADE **aux, UNIDADE *nova){
 		// arvore não possue uma raiz, então o novo é a nova raiz.
 		*aux = nova;
 		arvPRINCIPAL->qnt = arvPRINCIPAL->qnt + 1;
-	} else if( comparacao < 0 && (*aux)->esq != NULL ) {
+	} else if( comparacao > 0 && (*aux)->esq != NULL ) {
 		// Se o dado de novo NO for menor e o filho esquerdo do NO aux NÃO FOR NULL, 
 		// Então o novo NO vai ser comparado ao filho esquerdo do NO aux.
 		inserir_arvUNIDADE(arvPRINCIPAL, &((*aux)->esq), nova);
-	} else if( comparacao < 0 && (*aux)->esq == NULL ) {
+	} else if( comparacao > 0 && (*aux)->esq == NULL ) {
 		// Se o dado de novo NO for menor e o filho esquerdo do NO aux FOR NULL, 
 		// Então o novo NO será o novo filho esquerdo do NO aux.
 		(*aux)->esq = nova;
 		arvPRINCIPAL->qnt = arvPRINCIPAL->qnt + 1;
-	} else if( comparacao > 0 && (*aux)->dir != NULL ) {
+	} else if( comparacao < 0 && (*aux)->dir != NULL ) {
 		// Se o dado de novo NO for maior e o filho direito do NO aux NÃO FOR NULL, 
 		// Então o novo NO vai ser comparado ao filho direito do NO aux.
 		inserir_arvUNIDADE(arvPRINCIPAL, &((*aux)->dir), nova);
-	} else if( comparacao > 0 && (*aux)->dir == NULL ) {
+	} else if( comparacao < 0 && (*aux)->dir == NULL ) {
 		// Se o dado de novo NO for maior e o filho direito do NO aux FOR NULL, 
 		// Então o novo NO será o novo filho direito do NO aux.
 		(*aux)->dir = nova;
@@ -85,7 +85,6 @@ void preordem_unidade(UNIDADE *unidade){
 		
 		printf("-------------------------------------------- \n");
 		printf("| %s \n", unidade->nome);
-		// printf("unidade->arvorePALAVRAS->raiz = %p \n", unidade->arvorePALAVRAS);
 		preordem_palavra(unidade->arvorePALAVRAS->raiz);
 		printf("-------------------------------------------- \n\n\n");
 
@@ -98,8 +97,15 @@ void inordem_unidade(UNIDADE *unidade){
 	if(unidade != NULL){
 		inordem_unidade(unidade->esq);
 
+		/*
 		printf("UNIDADE = %s \n", unidade->nome);
 		inordem_palavra(unidade->arvorePALAVRAS->raiz);
+		*/
+
+		printf("-------------------------------------------- \n");
+		printf("| %s \n", unidade->nome);
+		inordem_palavra(unidade->arvorePALAVRAS->raiz);
+		printf("-------------------------------------------- \n\n\n");
 
 		inordem_unidade(unidade->dir);
 	} }
@@ -109,8 +115,10 @@ void posordem_unidade(UNIDADE *unidade){
 	if(unidade != NULL){
 		posordem_unidade(unidade->esq);
 		posordem_unidade(unidade->dir);
-		printf("UNIDADE = %s \n", unidade->nome);
+		printf("-------------------------------------------- \n");
+		printf("| %s \n", unidade->nome);
 		posordem_palavra(unidade->arvorePALAVRAS->raiz);
+		printf("-------------------------------------------- \n\n\n");
 	} }
 
 // Função que busca uma unidade na árvore de unidades.
