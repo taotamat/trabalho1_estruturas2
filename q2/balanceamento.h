@@ -1,5 +1,5 @@
 // Declarações das funções de balanceamento.c
-void ajustaALTURA(NO *raiz);
+void ajustaALTURA(NO **raiz);
 int fatorBALANCEAMENTO(NO *raiz);
 void horario(NO **raiz, NO *aux);
 void antihorario(NO **raiz, NO *aux);

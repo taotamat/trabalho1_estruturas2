@@ -34,31 +34,50 @@ void freeARV(NO *aux){
 // Função recursiva que insere o novo NO na árvore.
 void inserir(NO **aux, NO *novo) {
 
+	//printf("INSERIR\n");
+
 	if( *aux == NULL ){
 		// arvore não possue uma raiz, então o novo é a nova raiz.
 		*aux = novo;
+	} else if( novo->info < (*aux)->info ) {
+		// Se o dado de novo NO for menor e o filho esquerdo do NO aux NÃO FOR NULL, 
+		// Então o novo NO vai ser comparado ao filho esquerdo do NO aux.
+		inserir(&((*aux)->esq), novo);
+	} else {
+		// Se o dado de novo NO for maior e o filho direito do NO aux NÃO FOR NULL, 
+		// Então o novo NO vai ser comparado ao filho direito do NO aux.
+		inserir(&((*aux)->dir), novo);
+	}
+
+
+	/*
+	if( *aux == NULL ){
+		// arvore não possue uma raiz, então o novo é a nova raiz.
+		*aux = novo;
+
 	} else if( novo->info < (*aux)->info && (*aux)->esq != NULL ) {
 		// Se o dado de novo NO for menor e o filho esquerdo do NO aux NÃO FOR NULL, 
 		// Então o novo NO vai ser comparado ao filho esquerdo do NO aux.
 		inserir(&((*aux)->esq), novo);
+
 	} else if( novo->info < (*aux)->info && (*aux)->esq == NULL ) {
 		// Se o dado de novo NO for menor e o filho esquerdo do NO aux FOR NULL, 
 		// Então o novo NO será o novo filho esquerdo do NO aux.
 		(*aux)->esq = novo;
+
 	} else if( novo->info > (*aux)->info && (*aux)->dir != NULL ) {
 		// Se o dado de novo NO for maior e o filho direito do NO aux NÃO FOR NULL, 
 		// Então o novo NO vai ser comparado ao filho direito do NO aux.
 		inserir(&((*aux)->dir), novo);
+
 	} else if( novo->info > (*aux)->info && (*aux)->dir == NULL ) {
 		// Se o dado de novo NO for maior e o filho direito do NO aux FOR NULL, 
 		// Então o novo NO será o novo filho direito do NO aux.
 		(*aux)->dir = novo;
-	}
-	//printf("%d - aux->altura = %d \n", (*aux)->info,(*aux)->altura);
-	ajustaALTURA(*aux);
-	//printf("%d - aux->altura = %d \n", (*aux)->info,(*aux)->altura);
+	} */
+
+	ajustaALTURA(aux);
 	gestaoBALANCEAMENTO(aux); 
-	//printf("%d - aux->altura = %d \n", (*aux)->info,(*aux)->altura);
 
 	//ast();
 
@@ -99,6 +118,7 @@ int busca(NO *aux, int num) {
 
 
 void etapa1(NO **avr, double *somaTempo){
+    printf("etapa 1 <--------------------\n");
     int i, num;
 	double tempo_final;
 	clock_t tempo;
@@ -111,6 +131,7 @@ void etapa1(NO **avr, double *somaTempo){
 			num = numAleatorio2(10000,60000);
 		}
 
+		//printf("Chegou aqui * \n");
 		// printf("num = %d \n", num);
 
         *avr = gestaoLER(avr,num);
@@ -122,17 +143,32 @@ void etapa1(NO **avr, double *somaTempo){
 }
 
 void etapa2(NO *avr, int *d){
-    *d = labs(avr->esq->altura - avr->dir->altura);
+	printf("etapa 2 <--------------------\n");
+
+	int esquerda, direita;
+
+	if( avr->esq == NULL )
+		esquerda = 0;
+	else
+		esquerda = avr->esq->altura;
+
+	if( avr->esq == NULL )
+		direita = -1;
+	else
+		direita = avr->dir->altura;
+
+    *d = labs(esquerda - direita);
 	printf("FOLHAS:\n");
-	printf("altura do avr->esq->altura = %d \n", avr->esq->altura);
-	printf("altura do avr->dir->altura = %d \n", avr->dir->altura);
+	printf("altura do avr->esq->altura = %d \n", esquerda);
+	printf("altura do avr->dir->altura = %d \n", direita);
 	//printf("altura esq - altura dir = %d \n-------------\n", avr->esq->altura - avr->dir->altura);
 
-    printf("Diferenca: %d - %d = %d\n",avr->esq->altura,avr->dir->altura, *d);
+    printf("Diferenca: %d - %d = %d\n",esquerda,direita, *d);
 }
 
 //buscar os valores
 void etapa3(NO *avr, double *somaBusca){
+	printf("etapa 3 <--------------------\n");
 	int nums[5] = {100,500,1000,5000,10000};
 	double tempo_final;
 	int i,r;
@@ -166,9 +202,9 @@ void start(){
 		ast();
 		avrPRINCIPAL = NULL;
 		printf("ARVORE [ %d ]\n",i+1);
-		etapa1(&avrPRINCIPAL,&somaTempo);
-		etapa2(avrPRINCIPAL,&v[i]);
-		etapa3(avrPRINCIPAL,&somaBusca);
+		etapa1(&avrPRINCIPAL,&somaTempo); 	// Inserção dos valores aleatórios na árvore.
+		etapa2(avrPRINCIPAL,&v[i]);			// Calcular a diferença da profundidade.
+		etapa3(avrPRINCIPAL,&somaBusca); 	// Buscar os valores na árvore.
 		freeARV(avrPRINCIPAL);
 		ast();
 	}
