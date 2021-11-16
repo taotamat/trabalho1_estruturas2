@@ -71,6 +71,7 @@ int busca(ARVORE *aux, int num) {
 
 }
 
+// Libera todos os Nós da árvore.
 void freeARV(ARVORE *aux){
 	if(aux != NULL){
 		freeARV(aux->esq); // libera sae  
@@ -79,7 +80,7 @@ void freeARV(ARVORE *aux){
 	}
 }
 
-
+// 
 int profundidade(ARVORE *avr, int valor){
     int resultado=0;
     if(avr != NULL){
@@ -185,7 +186,7 @@ void etapa3(ARVORE *avr, double *somaBusca){
 	}
 }
 
-
+// Função que inicia tudo.
 void start(){
 	int i,v[30];
 	clock_t tempo;
@@ -197,10 +198,10 @@ void start(){
 		ast();
 		avrPRINCIPAL = alocaARV();
 		printf("ARVORE [ %d ]\n",i+1);
-		etapa1(avrPRINCIPAL,&somaTempo);
+		etapa1(avrPRINCIPAL,&somaTempo); // Inserção dos valores aleatórios na árvore.
 		//inordem(avrPRINCIPAL);
-		etapa2(avrPRINCIPAL,&v[i]);
-		etapa3(avrPRINCIPAL,&somaBusca);
+		etapa2(avrPRINCIPAL,&v[i]); // Calcular a diferença da profundidade.
+		etapa3(avrPRINCIPAL,&somaBusca); // Buscar os valores na árvore.
 		freeARV(avrPRINCIPAL);
 		ast();
 	}

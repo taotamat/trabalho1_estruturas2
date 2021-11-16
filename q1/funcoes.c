@@ -57,7 +57,6 @@ int contador(int v[], int n, int id, int tam){
     }
 
     return c;
-        
 }
 
 void contabilizar(int v[], int tam){
